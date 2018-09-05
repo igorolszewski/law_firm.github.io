@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kancelaria Prawnicza Jan Olszewski & Partners</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato&subset=latin-ext');
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="logobw.jpg" class="clothes-pics" alt="logo" id="logo">
+            <h1 class="clothes-pics">Kancelaria Prawnicza<br>Jan Olszewski & Partners</h1>
+            <p>
+
+            </p>
+        </div>
+        
+        
+        <div id="arrow">
+            <a href=#omnie><i class="fa fa-angle-down" aria-hidden="true"></i></a>   
+
+
+</div>
+    </header>
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href=#omnie>KANCELARIA</a></li>
+                <li><a href=#oferta>ZAKRES USŁUG</a></li>
+<!--                <li><a href=#projekty>HONORARIUM</a></li>-->
+                <li><a href=#kontakt>KONTAKT</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <section class="section" id="omnie">
+        <div class="container">
+                 <div id="clothes-pics">
+       <img class="portrait" src="AVN_7519.jpg" alt="Jan Olszewski">
+       <img class="ewl" src="AVN_7556.jpg" alt="Ewelina Olszewska">
+        </div>
+            <h2>KANCELARIA</h2>
+            <p>
+                Kancelaria Prawnicza Jan Olszewski &amp; Partners" oferuje profesjonalne doradztwo w zakresie prawa z różnych dyscyplin. Biuro prawne zatrudnia mających praktykę radców prawnych i gwarantuje szeroki wybór wsparcia dla indywidualnych i biznesowych klientów dostosowanych do wygórowanych wymagań. Biuro gwarantuje przejrzyste zasady współpracy i jest otwarte w dogodnych porach - w taki sposób, żeby z łatwością można było dopasować termin spotkania.
+            </p>
+
+        </div>
+    </section>
+    <section class="section" id="oferta">
+        <div class="container">
+            <h2>ZAKRES USŁUG</h2>
+            
+                <ul id="uslugi">
+                    <li class="item">40-letnie doświadczenie w różnych zawodach prawniczych</li>
+                    <li class="item">specjalizacja w sprawach gospodarczych i cywilnych</li>
+
+                    <li class="item">udokumentowane sukcesy przed Sądem Najwyższym i Naczelnym Sądem Administracyjnym</li>
+                    <li class="item">wynagrodzenie ma charakter negocjowalny</li>
+
+                    <li class="item">nie podejmujemy się wszystkich spraw zwłaszcza tych ,które w/g naszej oceny nie niosą dodatniej prognozy, wówczas porada prawna jest bezpłatna</li>
+                </ul>
+
+
+            
+        </div>
+    </section>
+
+
+    <section class="section" id="kontakt">
+        <div class="container">
+            <h2>KONTAKT</h2>
+            <p id="adres">
+               Jan Olszewski <br>
+               Wyszyńskiego 3/4 <br>
+               26-600 Radom <br>
+               tel. +48 606 610 919 <br>
+               tel. +48 530 668 588 <br>
+               janolszewski@onet.eu
+            </p>
+
+        </div>
+    </section>
+    
+        <section class="section" id="oferta" id="lokalizacja" style="padding:0">
+        <div id="map">
+ 
+
+
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <p>&copy; Igor Olszewski, 2017</p>
+    </footer>
+
+    <script src="jquery.js"></script>
+    <script src="stickyfill.js"></script>
+    <script>
+        $('.nav').stickyfill();
+    </script>
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 70
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+    <script src="functions.js"></script>
+       <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5WYpiQUU6mfR3JL1sxbYnz0q4-TrFTy4&callback=initMap"
+    async defer></script>
+</body>    
+
+</html>
